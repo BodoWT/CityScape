@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use App\Entity\Traits\CreatedTraits;
+use App\Entity\Traits\UpdatedTraits;
 use App\Repository\CategoryRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -10,6 +12,8 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: CategoryRepository::class)]
 class Category
 {
+    use CreatedTraits;
+    use UpdatedTraits;
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
