@@ -17,6 +17,4 @@ trait UpdatedTraits
     {
         return $this->updatedAt;
     }
-
-
 }
